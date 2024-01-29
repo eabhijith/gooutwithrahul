@@ -49,14 +49,25 @@
             <div class="gif_container">
                 <!-- <img src="image/ask.gif" alt="Cute animated illustration"> -->
 
-                <video width="800" autoplay controls loop id="myVideo">
+                <video width="800" autoplay controls loop id="introVideo">
                     <source src="image/intro.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                   </video>
+
+
+                  <!-- <video width="800" autoplay controls loop id="yesVideo">
+                    <source src="image/yes.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+
+                  <video width="800" autoplay controls loop id="noVideo">
+                    <source src="image/no.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video> -->
             </div>
             <div class = "buttons">
-                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
-                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yep</button>
+                <button class="btn" id="noButton"  onclick="moveButton()">NO</button>
             </div>
             <video id="novideo" width="0" height="0" controls>
                 <source src="image/SadMoment.mp4" 
@@ -92,27 +103,33 @@
 
         function playAudio()
         {
-            document.getElementById('novideo').play();
+            // document.getElementById('novideo').play();
         }
 
         function nextPage() {
             //window.location.href = "yes.html";
             document.getElementById('ans').style.display = 'block';
             document.getElementById('ask').style.display = 'none';
-            document.getElementById('novideo').pause();
-            document.getElementById('ansvideo').play();
+            // document.getElementById('novideo').pause();
+            // document.getElementById('ansvideo').play();
+            document.getElementById('introVideo').src = 'image/yes.mp4';
+
+            
         }
 
         function moveButton() {
-            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
-            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
-            document.getElementById('noButton').style.left = `${x}px`;
-            document.getElementById('noButton').style.top = `${y}px`;
+            //var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+            //var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+            //document.getElementById('noButton').style.left = `${x}px`;
+            //document.getElementById('noButton').style.top = `${y}px`;
+            document.getElementById('introVideo').src = 'image/no.mp4';
+
             playAudio();
         }
 
         // Get the video
-var video = document.getElementById("myVideo");
+var video = document.getElementById("introVideo");
+do
 video.play();
 
     </script> 
