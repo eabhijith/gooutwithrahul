@@ -37,6 +37,8 @@
       gtag('js', new Date());
 
       gtag('config', 'G-3EWCZHDCG9');
+
+
     </script>
   </head>
   <body>
@@ -47,7 +49,7 @@
             <div class="gif_container">
                 <!-- <img src="image/ask.gif" alt="Cute animated illustration"> -->
 
-                <video width="400" controls autoplay>
+                <video width="800" controls autoplay loop id="myVideo">
                     <source src="image/intro.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                   </video>
@@ -108,6 +110,20 @@
             document.getElementById('noButton').style.top = `${y}px`;
             playAudio();
         }
+
+        // Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+// var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    // btn.innerHTML = "Pause";
+  }
+}
 
     </script> 
 </html>
