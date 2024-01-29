@@ -5,13 +5,13 @@ body {
     background-image: radial-gradient(circle, rgba(2,0,36,1) 7%, rgba(35,35,122,1) 23%, rgba(61,145,29,1) 38%, rgba(164,44,122,1) 46%, rgba(114,57,151,1) 57%, rgba(183,79,129,1) 71%, rgba(210,66,111,1) 82%, rgba(0,212,255,1) 100%);
 }
 
-#introVideo {
+/* #introVideo {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-  }
+  } */
 
 #ans {
     display: none;
@@ -61,7 +61,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 31rem;
+    margin-top: 4rem;
     margin-left: 20px;
 }
 
